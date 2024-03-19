@@ -17,9 +17,7 @@ Bunch of cabling
 
 # Libraries Used
 
-The EPS32 PNG Lib is included in the project fodler & does not need to be installed as a library
-
-ESP32 PNG Library - https://github.com/lagunax/ESP32-upng - modified to work with SD card instead of SPIFFS
+The EPS32 PNG Lib is included in the project folder & does not need to be installed as a library **https://github.com/lagunax/ESP32-upng** - modified to work with SD card instead of SPIFFS on the ESP32
 
 The POLOLU OLED Lib needs to be installed in your Arduino Libraries folder https://github.com/pololu/pololu-oled-arduino
 
