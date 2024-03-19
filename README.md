@@ -39,11 +39,15 @@ The ESP32 is not powerfull enough to play actual video files like .mp4, but we c
 12.  Set the recording Ration to 1
 13.  Hit Save and restart VLC Player
 
+To create your animations PNG files simply laod your video and hit play. The PNG files will be written to iether the source directory of your animation or the "Directory Path Prefix" you set in step 11. Once you have all your PNG files, create a folder on the SD card with the same name as you set in step 10. eg.. "MyAnimation". Move all the PNG files into this folder. 
+
+Repeat the above for all your video files, but be sure to chagne the animation name prefix in step 11 and output folder path in step 11.
 
 # Animation Pre requisites
 
-Your animations must be in .png 24BIT colour, no transparency or anythhing else fancy. 
-The animations must be 128*64px 
+Your animations must be in .png 24BIT colour, no transparency or anythhing else fancy. VLC will output by default as this
+Make sure your source material is iether BW or Greyscale as the end render is in 1bit BW on the OLED Screen
+The animations dimensions must be 128*64px 
 The file names must look like this "AnimationName_00000.png" . Each animation can have up to a maximum of 99,999 frames.
 The 1st frame must start at "_00001"
 (You can also set a frame delay in the playlist file below if you want to slow down or speed up the playback)
@@ -85,11 +89,16 @@ Example layout of the "playlist" file
 ````
 AnimationOne,100,10;AnimationTwo,200,20;AnimationThree,50,100;
 ````
+You can set up a playlist toplay the same animation mulitple times, with any per frame delay and even reduce the animation frame count. EG.. this will play animation 1 (which has 100 frames in total) once at full speed, then at a slower seped, then only the 1st 50 frames at full speed
+
+````
+AnimationOne,100,1;AnimationOne,100,50;AnimationOne,50,1;
+````
+
+
 
 # Pinout for the Wemos D32 Pro module
-
-<img src="PinOut.PNG" width="600" />
-
+TBD
 
 # Boot Up Flow
 
