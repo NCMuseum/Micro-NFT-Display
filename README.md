@@ -1,10 +1,18 @@
 # Parts List
 
+Solderless Breadboard similar to this **https://core-electronics.com.au/solderless-breadboard-830-tie-point-zy-102.html**
+
 LOLIN D32 Pro ESP32 Dev Board **https://www.aliexpress.com/item/32883116057.html**
 
 Graphical OLED Display (128x64)  **https://www.pololu.com/product/3760**
 
 SD Card to fit your animations
+
+1 x 18650 Lithium Ion Cell (2600mah)
+
+1 x power switch
+
+Bunch of cabling
 
 
 # Libraries Used
