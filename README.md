@@ -89,13 +89,11 @@ Example layout of the "playlist" file
 ````
 AnimationOne,100,10;AnimationTwo,200,20;AnimationThree,50,100;
 ````
-You can set up a playlist toplay the same animation mulitple times, with any per frame delay and even reduce the animation frame count. EG.. this will play animation 1 (which has 100 frames in total) once at full speed, then at a slower seped, then only the 1st 50 frames at full speed
+You can set up a playlist toplay the same animation mulitple times, with any per frame delay and even reduce the animation frame count. EG.. this will play animation 1 (which has 100 frames in total) once at full speed, then at a slower speed, then only the 1st 50 frames at full speed
 
 ````
 AnimationOne,100,1;AnimationOne,100,50;AnimationOne,50,1;
 ````
-
-
 
 # Pinout for the Wemos D32 Pro module
 TBD
@@ -103,6 +101,6 @@ TBD
 # Boot Up Flow
 
 1.  Insert the SD CARD and power on
-2.  The Pre prosessor will RUN over the playlist and compile a .STREAM file for each animation. You will see a new folder for each animation called "AnimationNameSTREAM" and inside it will be teh stream file named "AnimationName.STREAM"
+2.  The Pre prosessor will RUN over the playlist and compile a .STREAM file for each animation. You will see a new folder for each animation called "AnimationNameSTREAM" and inside it will be the stream file named "AnimationName.STREAM". The OLED screen will display a prgress bar for each animation as they are beeing processed. The preprocess is SLOW especialy with more than 100 files for each animation, however this step is only done once
 3.  After all animation folders are processed the ESP32 will start playing the streams in the order listed in the file 'playlist'. You can put multiple entries for the same animation. Each animation has 2 options. Number of frames in the animation folder and the delay in MILISECONDS between each frame. 1ms delay is good for very smooth frame rates.
 
