@@ -20,6 +20,7 @@ The POLOLU OLED Lib needs to be installed in your Arduino Libraries folder https
 Your animations must be in .png 24BIT colour, no transparency or anythhing else fancy. 
 The animations must be 128*64px 
 The file names must look like this "AnimationName_00000.png" . Each animation can have up to a maximum of 99,999 frames.
+The 1st frame must start at "_00001"
 (You can also set a frame delay in the playlist file below if you want to slow down or speed up the playback)
 
 # SDCARD Pre requisites
@@ -37,7 +38,6 @@ Example layout of one of the animation folders:
 
 ````
 /AnimationOne
-AnimationOne_00000.png
 AnimationOne_00001.png
 AnimationOne_00002.png
 AnimationOne_00003.png
@@ -69,5 +69,5 @@ AnimationOne,100,10;AnimationTwo,200,20;AnimationThree,50,100;
 
 1.  Insert the SD CARD and power on
 2.  The Pre prosessor will RUN over the playlist and compile a .STREAM file for each animation. You will see a new folder for each animation called "AnimationNameSTREAM" and inside it will be teh stream file named "AnimationName.STREAM"
-3.  After all animation folders are processed the ESP32 will start playing the streams in the order listed in the file 'playlist'. You can put multiple entries for the same animation. Each animation has 2 options. Number of frames in the animation folder and the delay in MILISECONDS between each frame. 10ms delay is good for very smooth frame rates.
+3.  After all animation folders are processed the ESP32 will start playing the streams in the order listed in the file 'playlist'. You can put multiple entries for the same animation. Each animation has 2 options. Number of frames in the animation folder and the delay in MILISECONDS between each frame. 1ms delay is good for very smooth frame rates.
 
