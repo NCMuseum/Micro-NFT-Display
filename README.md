@@ -1,3 +1,5 @@
+An ESP32 based video player, that plays files from an SD card. Designed to play to a 128x64px OLED Screen.
+
 # Parts List
 
 Solderless Breadboard similar to this **https://core-electronics.com.au/solderless-breadboard-830-tie-point-zy-102.html**
