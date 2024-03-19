@@ -21,6 +21,25 @@ The EPS32 PNG Lib is included in the project folder & does not need to be instal
 
 The POLOLU OLED Lib needs to be installed in your Arduino Libraries folder https://github.com/pololu/pololu-oled-arduino
 
+# Creating an animation file set from any video file
+
+The ESP32 is not powerfull enough to play actual video files like .mp4, but we can preprocess any video file as sequenced PNG images. To do this you will need VLC Player **https://www.videolan.org/** After its installed you will need to configure on the Video Filters to output PNG files for you. Follow these steps to set it up:
+
+1.  Open VLC Player
+2.  Click on the TOOLS menu and select PREFERENCES
+3.  Tick the "ALL" radio button in SHOW SETTINGS so you can see all teh settings at once
+4.  Ont the left pane, scroll down to the bottom and DOUBLE CLICK on VIDEO
+5.  On the right PANE tick "SCENE VIDEO FILTER"
+6.  On the left pane scroll down to and click on "SCENE FILTER"
+7.  On the right pane set the Image Format to "png"
+8.  Image width to 128
+9.  Image height to 64
+10.  Filename prefix to whatever you want your animation to be called eg.. "MyAnimation_"
+11.  If you want the PNG files output to specific folder enter it in the "Directory Path Prefix" field
+12.  Set the recording Ration to 1
+13.  Hit Save and restart VLC Player
+
+
 # Animation Pre requisites
 
 Your animations must be in .png 24BIT colour, no transparency or anythhing else fancy. 
@@ -28,6 +47,7 @@ The animations must be 128*64px
 The file names must look like this "AnimationName_00000.png" . Each animation can have up to a maximum of 99,999 frames.
 The 1st frame must start at "_00001"
 (You can also set a frame delay in the playlist file below if you want to slow down or speed up the playback)
+
 
 # SDCARD Pre requisites
 
