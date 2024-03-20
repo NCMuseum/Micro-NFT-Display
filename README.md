@@ -99,7 +99,7 @@ You can set up a playlist toplay the same animation mulitple times, with any per
 AnimationOne,100,1;AnimationOne,100,50;AnimationOne,50,1;
 ````
 
-# Pinout for the Wemos D32 Pro module
+# Pinout for the Lolin D32 Pro ESP32 module
 
 Micro CD Card PinOut for the Wemos D32 Pro as taken from  **https://www.wemos.cc/en/latest/_static/files/sch_d32_pro_v2.0.0.pdf** these are allready hardwired on this module
 
