@@ -99,6 +99,10 @@ void initFS()
   if(! SD.begin(SS, SPI, 40000000, "/sd", 5, false) )
   {
     Serial.printf("\r\n\tSD Card Mount Failed...");
+    clearCanvas();
+    display.clear();
+    display.print("SD MNT FAIL");
+    display.display();
     while(true)
     {
       yield();
@@ -108,6 +112,10 @@ void initFS()
   if(cardType == CARD_NONE)
   {
     Serial.printf("\r\n\tNo SD card attached!");
+    clearCanvas();
+    display.clear();
+    display.print("NO SD CARD");
+    display.display();
     return;
   }
 }
