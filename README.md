@@ -98,7 +98,33 @@ AnimationOne,100,1;AnimationOne,100,50;AnimationOne,50,1;
 ````
 
 # Pinout for the Wemos D32 Pro module
-TBD
+
+Micro CD Card PinOut for the Wemos D32 Pro as taken from  **https://www.wemos.cc/en/latest/_static/files/sch_d32_pro_v2.0.0.pdf** these are allready hardwired on this module
+
+````
+NS		1	NC
+/CS		2	IO    04	TF_CS
+DI		3	IO    23	MOSI
+VDD		4	3.3V
+CLK		5	IO    18	SCK
+VSS		6	GND
+D0		7	IO    19	MISO
+RSV		8	NC
+CD(1)	G	GND
+````
+
+PINOUT for OLED Screen
+
+````
+SCREEN  ESP32 Pin
+VCC     +5V
+GND     GND
+CLK     22
+MOS     26
+RES     0
+DC      21
+CS      27
+````
 
 # Boot Up Flow
 
