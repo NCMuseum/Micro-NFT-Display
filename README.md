@@ -16,6 +16,8 @@ SD Card to fit your animations
 
 Bunch of cabling
 
+Optional Stand can be 3D printed from the STL in the "Design Files" folder
+
 
 # Libraries Used
 
