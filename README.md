@@ -60,6 +60,7 @@ The 1st frame must start at "_00001"
 # SDCARD Pre requisites
 
 Format the SDCARD as one FAT32 Volume. Size isnt important. The root of the SDCard needs to have the following structure:
+NO SPECIAL CHARECTORS IN ANIMATION NAMES
 
 ````
 [DIR] AnimationOne
