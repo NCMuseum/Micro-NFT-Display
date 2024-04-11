@@ -269,7 +269,7 @@ void compileStream()
   unsigned short int plCounter=0, postFrameCounter=0, charArrayIndex=0, bytesWriten=0;
   byte dirExists=0, streamExists=0;
   char * tempPathArray;
-  char endOfFileChars[] = "_00000.png";
+  char endOfFileChars[] = "_00001.png";
   unsigned short int barWidth=98;
   double progressBar = 0;
   PLNODE* queLocater;
@@ -308,7 +308,9 @@ void compileStream()
       //check if output stream file exists
       if(!SD.exists(queLocater->_fullPath))
       {
-          SD.mkdir(queLocater->_folderPath);
+          Serial.printf("\r\n\tCreating folder\t[%s]", queLocater->_streamFolderPath);
+          SD.mkdir(queLocater->_streamFolderPath);
+          Serial.printf("\r\n\tOpening File\t[%s]", queLocater->_fullPath);
           outputStream = SD.open(queLocater->_fullPath, FILE_WRITE);
           if(!outputStream)
           {
