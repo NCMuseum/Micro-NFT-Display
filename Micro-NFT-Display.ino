@@ -429,6 +429,7 @@ void playStream(unsigned short int streamID)
   unsigned short int frameIndex=0, bufferIndex=0;
   char* frameBuffer = new char[rows*cols*3];
   unsigned short int pixelValue=0;
+  unsigned short int colourLevelFilter = 300;
 
   PLNODE* queLocater = globalAnimationQue.findByID(streamID);
   if(queLocater!=NULL)
@@ -447,7 +448,7 @@ void playStream(unsigned short int streamID)
         {
           memcpy(tempColour, frameBuffer+bufferIndex, 3);
           pixelValue = tempColour[0]+tempColour[1]+tempColour[2];
-          if(pixelValue>0)
+          if(pixelValue>colourLevelFilter)
           {
             setPixel(xCount, yCount, true);
           }
